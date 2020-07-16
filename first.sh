@@ -1,12 +1,9 @@
 #!/bin/bash
-FILE="/etc/passwd"
-if [ -e $FILE ]
+ARG=$1
+FILENAME=$(file "$ARG")
+if [ $FILENAME="directory" ]
 then
-  echo "Passwords are enabled"
-fi
-if [ -w $FILE ]
-then
-  echo "Write permission granted on ${FILE}"
+  exit 1
 else
-  echo "File is not writable"
+  exit 2
 fi
