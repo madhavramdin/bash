@@ -1,10 +1,10 @@
 #!/bin/bash
 case "$1" in 
-start)
+[sS][tT][aA][rR][tT])
     echo " Starting the Sleepwalking server"
-    /tmp/sleepwalking &
+    /tmp/sleepwalking-server &
     ;;
-stop)
+[sS][tT][oO][pP])
     echo " Killing the sleepwalker " 
     kill $(cat /tmp/sleepwalkingserver.pid)
     ;;
