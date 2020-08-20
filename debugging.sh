@@ -1,3 +1,6 @@
 #!/bin/bash
-DEBUG=true
-$DEBUG || echo "Debug mode ON."
+set -x
+ls /Users/madhav/Downloads
+ls /Users/madhav/Desktop
+ls /Users/madhav/Documents
+
